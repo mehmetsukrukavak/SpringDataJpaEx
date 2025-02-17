@@ -40,7 +40,7 @@ public class SpringDataJpaExApplication {
 
 		System.out.println(repo.findByName("Mehmet Şükrü Kavak"));
 
-		System.out.println(repo.findByMarks(96));
+		System.out.println(repo.findByMarksGreaterThan(90));
 
 
 	}
