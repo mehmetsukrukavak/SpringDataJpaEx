@@ -36,7 +36,9 @@ public class SpringDataJpaExApplication {
 
 		//System.out.println(repo.findAll());
 
-		System.out.println(repo.findById(102).orElse(null));
+		//System.out.println(repo.findById(102).orElse(null));
+
+		System.out.println(repo.findByName("Mehmet Şükrü Kavak"));
 
 
 	}
