@@ -38,9 +38,23 @@ public class SpringDataJpaExApplication {
 
 		//System.out.println(repo.findById(102).orElse(null));
 
-		System.out.println(repo.findByName("Mehmet Şükrü Kavak"));
+//		System.out.println(repo.findByName("Mehmet Şükrü Kavak"));
+//
+//		System.out.println(repo.findByMarksGreaterThan(90));
 
-		System.out.println(repo.findByMarksGreaterThan(90));
+		Student student2 = context.getBean(Student.class);
+
+		student2.setId(102);
+		student2.setName("Jane Doe");
+		student2.setMarks(78);
+
+		repo.save(student2);
+
+		System.out.println(repo.findAll());
+
+		repo.delete(student2);
+
+		System.out.println(repo.findAll());
 
 
 	}
