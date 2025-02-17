@@ -34,7 +34,10 @@ public class SpringDataJpaExApplication {
 		//repo.save(student2);
 		//repo.save(student3);
 
-		System.out.println(repo.findAll());
+		//System.out.println(repo.findAll());
+
+		System.out.println(repo.findById(102).orElse(null));
+
 
 	}
 
